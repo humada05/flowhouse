@@ -1,0 +1,68 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Designing Scalable Data Pipelines",
+    description:
+      "We help create data pipelines that efficiently move and transform your data with minimal latency and maximum reliability.",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "Make Them Faster & Cheaper",
+    description:
+      "We help optimize data systems to scale efficiently, ensuring fast pipelines and reduced cloud costs.",
+    icon: "bx:bxs-rocket",
+  },
+  {
+    title: "Scale Your Data Safely",
+    description:
+      "We help teams set up sustainable data practices, from tool selection to building observability and recovery, ensuring your systems scale with confidence.",
+    icon: "bx:bxs-shield-alt-2",
+  },
+  // {
+  //   title: "Broad Integration",
+  //   description:
+  //     "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
+  //   icon: "bx:bxs-bot",
+  // },
+  // {
+  //   title: "SEO Enabled",
+  //   description:
+  //     "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
+  //   icon: "bx:bxs-file-find",
+  // },
+  // {
+  //   title: "Community",
+  //   description:
+  //     "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
+  //   icon: "bx:bxs-user",
+  // },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    We help companies build reliable data pipelines
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Explore our key services designed to empower your data journey:
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

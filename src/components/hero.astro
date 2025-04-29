@@ -1,0 +1,51 @@
+---
+import { Picture } from "astro:assets";
+import builderImage from "@/assets/pipeline_builder_white.png";
+import Link from "@/components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1 hidden md:block">
+    <Picture
+      src={builderImage}
+      alt="Astronaut in the air"
+      width={500}
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avifx"
+    />
+  </div>
+  <div>
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Build Data Pipelines for Scale
+    </h1>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+    Leverage our expertise to streamline your data pipelines, whether using tools like Fivetran or Airbyte, or building custom solutions, to accelerate growth and maximize data value.
+    </p>
+    <!-- <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <Link
+        href="#"
+        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
+        target="_blank"
+        class="flex gap-1 items-center justify-center"
+        rel="noopener">
+        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
+
+        Download for Free
+      </Link>
+      <Link
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href="https://github.com/surjithctly/astroship"
+        class="flex gap-1 items-center justify-center"
+        target="_blank">
+        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
+        GitHub Repo
+      </Link>
+    </div> -->
+  </div>
+</main>
