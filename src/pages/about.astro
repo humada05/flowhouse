@@ -15,12 +15,12 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   <Container>
     <Sectionhead>
       <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">I'm Ahmed, a backend systems and data engineer based in California.</Fragment>
+      {false && <Fragment slot="desc">Our Story</Fragment>}
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        My Story
+      <h2 class="font-bold text-3xl text-gray-800 text-center">
+        Who We Are
       </h2>
       <!-- <p class="text-lg leading-relaxed text-slate-500">
         We're a multi-cultural team from around the world! We come from diverse
@@ -29,13 +29,14 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
       </p> -->
       <!-- <section class="my-story mt-16"> -->
         <p class="text-lg text-slate-700 mb-4">
-            I'm a backend and data engineer specializing in designing and building scalable, reliable systems for data processing and transformation.
+            FlowHouse is a data infrastructure advisory practice that helps companies design, scale, and optimize modern data systems. Our mission is to empower organizations to harness the full potential of their data by providing expert guidance and innovative solutions.
+        </p>
+
+        <p class="text-lg text-slate-700 mb-4">
+          Founded by Ahmed, a former Fivetran engineer who helped build the company’s core replication products, we bring deep technical expertise and practical experience to every engagement.
         </p>
         <p class="text-lg text-slate-700 mb-4">
-          I spent almost 6 years at Fivetran, where I helped design and grow our database replication products, eventually serving thousands of customers. My work spanned everything from Change Data Capture pipelines to performance tuning and connector architecture. I also built internal tooling and dev environments that helped our team ship faster and more reliably.
-        </p>
-        <p class="text-lg text-slate-700 mb-4">
-            Since then, I’ve taken that experience into new challenges — designing high-performance backend systems and data infrastructure, and now working independently to help customers build and scale their data systems.
+          Whether it's building scalable CDC pipelines, improving reliability, or reducing cloud costs, we partner with teams to streamline data delivery and create systems built for growth.
         </p>
       <!-- </section> -->
       
