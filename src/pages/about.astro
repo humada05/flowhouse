@@ -14,36 +14,29 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 <Layout title="About">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">About</Fragment>
-      {false && <Fragment slot="desc">Our Story</Fragment>}
+      <Fragment slot="title">About Us</Fragment>
+      <Fragment slot="desc">Learn more about our mission and team</Fragment>
     </Sectionhead>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800 text-center">
-        Who We Are
-      </h2>
-      <!-- <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
-      </p> -->
-      <!-- <section class="my-story mt-16"> -->
-        <p class="text-lg text-slate-700 mb-4">
-            FlowHouse is a data infrastructure advisory practice that helps companies design, scale, and optimize modern data systems. Our mission is to empower organizations to harness the full potential of their data by providing expert guidance and innovative solutions.
-        </p>
-
-        <p class="text-lg text-slate-700 mb-4">
-          Founded by Ahmed, a former Fivetran engineer who helped build the company’s core replication products, we bring deep technical expertise and practical experience to every engagement.
-        </p>
-        <p class="text-lg text-slate-700 mb-4">
-          Whether it's building scalable CDC pipelines, improving reliability, or reducing cloud costs, we partner with teams to streamline data delivery and create systems built for growth.
-        </p>
-      <!-- </section> -->
-      
+    <div class="flex flex-col gap-6 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800 text-center">Who We Are</h2>
+      <p class="text-lg leading-relaxed text-slate-600">
+        FlowHouse is a data infrastructure advisory practice that helps companies design, scale, and optimize modern data systems. Our mission is to empower organizations to harness the full potential of their data by providing expert guidance and innovative solutions.
+      </p>
+      <p class="text-lg leading-relaxed text-slate-600">
+        Founded by Ahmed, a former Fivetran engineer who helped build the company’s core replication products, we bring deep technical expertise and practical experience to every engagement.
+      </p>
+      <p class="text-lg leading-relaxed text-slate-600">
+        Whether it's building scalable CDC pipelines, improving reliability, or reducing cloud costs, we partner with teams to streamline data delivery and create systems built for growth.
+      </p>
     </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        publishedTeamMembers.map((teamMemberEntry) => (
+
+    <div class="mt-16">
+      <h2 class="font-bold text-2xl text-gray-800 text-center mb-8">
+        Meet Our Team
+      </h2>
+      <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl">
+        {publishedTeamMembers.map((teamMemberEntry) => (
           <div class="group">
             <div class="w-full aspect-square">
               <Picture
