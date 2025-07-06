@@ -1,0 +1,25 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Container from "@/components/container.astro";
+import Sectionhead from "@/components/sectionhead.astro";
+// const { Content, data } = await getEntry('legal', 'privacy-policy');
+import {Content} from '../policies/privacy-policy.md';
+// Collections query
+import { getEntry, render } from 'astro:content';
+const product = await getEntry('policies', 'privacy-policy');
+const { Content } = await render(product);
+---
+
+
+<Layout title="Privacy">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Privacy Policy</Fragment>
+      <Fragment slot="desc">Effective Date: July 6, 2025</Fragment>
+    </Sectionhead>
+
+    <div class="prose mx-auto max-w-4xl mt-8">
+      <Content></Content>
+    </div>
+  </Container>
+</Layout>
